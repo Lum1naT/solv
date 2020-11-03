@@ -21,7 +21,30 @@ function hexToRgb(hex){
     return res;
 }
 
+function hexToLumi(hex){
+    var sub = hex.substring(1, 7)
+    var r = hexToInt(sub.substring(0, 2))
+    var g = hexToInt(sub.substring(2, 4))
+    var b = hexToInt(sub.substring(4, 6))
+
+    var res = r * 0.2126 + g * 0.7152 + b * 0.0722
+
+    return res;
+}
+
+
 function MyButton(props) {
+
+    var textColor = '';
+
+    if (hexToLumi(props.bgcolor) > 126) {
+        textColor = '#000000';    
+    
+    } else {
+
+        textColor = '#FFFFFF';
+
+    }
 
 
     const styles = StyleSheet.create({
@@ -30,14 +53,17 @@ function MyButton(props) {
             padding: 10,
             marginBottom: 10,
             
+        },
+
+        text: {
+            color: textColor,
         }
     })
 
     return(
         <TouchableOpacity style={styles.button}>
-            <Text>
-            { hexToRgb("#FFFFFF") }
-            { hexToInt("FF") }
+            <Text style={styles.text}>
+            I am always visible
             </Text>
             
         </TouchableOpacity>
