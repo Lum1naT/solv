@@ -12,7 +12,9 @@
     "expo-splash-screen": "~0.6.2",
     "expo-status-bar": "~1.0.2",
     "expo-updates": "~0.3.2",
+    "node-sass": "^5.0.0",
     "react": "16.13.1",
+    "react-bootstrap": "^1.4.0",
     "react-dom": "16.13.1",
     "react-native": "~0.63.3",
     "react-native-gesture-handler": "~1.7.0",
@@ -24,8 +26,7 @@
   "devDependencies": {
     "@babel/core": "~7.9.0",
     "babel-jest": "~25.2.6",
-    "jest": "~25.2.6",
-    "react-test-renderer": "~16.13.1"
+    "jest": "~25.2.6"
   },
   "jest": {
     "preset": "react-native"
